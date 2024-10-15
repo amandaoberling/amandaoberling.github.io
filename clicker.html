@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        margin-top: 20px; 
+        margin-bottom: 50px; 
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    body{
+      background-color:rgb(207, 248, 201);
+    }
+    .pad{
+      position: fixed;
+      width:60%;
+      height:60%;
+      top: 50%;
+      left: 250px;
+    }
+    .Click{
+      display: block;
+      position:relative;
+      top: 2;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .backgroundStuff{
+      position:absolute;
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+    }
+    .backgroundStuff1{
+      position:absolute;
+      right:0;
+      top:0;
+      height:100%;
+      width:100%;
+    }
+    .backgroundStuff2{
+      position:absolute;
+      left:0;
+      bottom:0;
+      height:10%;
+      width:10%;
+    }
+    .backgroundStuff3{
+      position:absolute;
+      right:0;
+      bottom:0;
+      height:10%;
+      width:10%;
+    }
+    .backgroundStuff4{
+      position:relative;
+      margin-right: auto;
+      margin-left: auto;
+      top: 2px;
+      height:10%;
+      width:10%;
+    }
+    .backgroundStuff5{
+      position:relative;
+      margin-right: auto;
+      margin-left: auto;
+      bottom:0;
+      height:10%;
+      width:10%;
+    }
+  }
+    .backgroundStuff6{
+      position:relative;
+      margin-right: 0;
+      top:0;
+      height:10%;
+      width:10%;
+    }
+    .Score{position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;}
+
+   </style>
+</head>
+<body>
+    
+    <a href = "index.html">Back</a>
+  
+  <div class = "backgroundStuff">
+    <img id = "backgroundStuff" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "backgroundStuff1">
+    <img id = "backgroundStuff1" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "backgroundStuff2">
+    <img id = "backgroundStuff2" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "backgroundStuff3">
+    <img id = "backgroundStuff3" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "backgroundStuff4">
+    <img id = "backgroundStuff4" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "backgroundStuff5">
+    <img id = "backgroundStuff5" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "backgroundStuff6">
+    <img id = "backgroundStuff6" src = "https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
+  </div>
+  <div class = "Click">
+    <img id="img" src= "https://png.pngtree.com/png-vector/20240127/ourmid/pngtree-watercolor-funny-frog-wearing-sunglasses-ai-generated-png-image_11554771.png">
+  </div>
+  <div class = "pad">
+    <img class = "pad" src = "https://png.pngtree.com/png-vector/20230104/ourmid/pngtree-wood-log-vector-clip-art-png-image_6551751.png">
+    <div class = "Score">
+      <h1 id="Score">Score: 0</h1> 
+  </div>
+
+  </div>
+</body>
+</html>
+<script>
+    document.getElementById("img").addEventListener("click",up)
+    var score = 0
+    function up(){
+      score = score + 1
+      document.getElementById("Score").innerHTML= score
+      console.log(score)}
+    
+</script>
