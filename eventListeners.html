@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Event Listeners Answers</title>
+
+  <style>
+    .button {
+      margin: auto;
+    }
+    .buttonPic {
+      margin: auto;
+      height: 500px;
+      width: 500px;
+    }
+    #horsie{
+      height: 130px;
+      width: 500px;
+      right: 2;
+    }
+    #one{font-family:serif;
+      position: static;
+      top: 30;
+      right: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p id="colorChanger">create a new file called eventListeners.html  make all of your answers on that page. Yes it will just be a bunch of random things on a page. the questions require you to use html, css, and javascript. 
+
+    2. create a website that has a picture of a cat that, when clicked, makes an alert that says "cat!"
+    the alert function prints it's argument
+    also because JS is dumb, the alert function has to be inside of a function you create.         
+    
+    3.make a paragraph tag that changes color when clicked on       
+    
+    4. make an image that gets larger when you mouse over it         
+    
+    5. make a paragraph with a 1 in it. The number should go up when you click on the paragraph.                 
+    
+    6. add an upgrade button to your clicker project.          
+    </p>
+
+  <img class="buttonPic" id="buttonPic"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRA-e3WO69k_YpCgbNZTKkB4i7SG0GUOAyohNEE4UbRFr-jA:https://lookaside.instagram.com/seo/google_widget/crawler/%3Fmedia_id%3D3110615747586750783&s">
+  <img id="horsie"
+    src="https://media.istockphoto.com/id/1160791767/photo/laughing-horse.jpg?s=612x612&w=0&k=20&c=_63iHrEConkZdSHORyIjOl7N4R4hxwKCZrwXmt8wptw=">
+  <p id = "one">1</p>
+</body>
+
+</html>
+<script>
+  //Cat image thing... #1
+  document.getElementById("buttonPic").addEventListener("click", catMessage)
+  function catMessage() {
+    alert("Cat!")
+  }
+
+
+  //Color changing thing... #2
+  var color = "blue"
+  document.getElementById("colorChanger").addEventListener("click", colorChange)
+  function colorChange() {
+    document.getElementById("colorChanger").style.color = color;
+    if(color === "blue"){color = "green";}
+    else if(color === "green"){color = "purple";}
+    else if(color === "purple"){color = "red";}
+    else if(color === "red"){color = "black";}
+    else if(color === "black"){color = "blue";}
+  }
+  //document.getElementById("colorChanger").addEventListener("click", colorChange)
+
+
+
+//Horse image thing... #3
+  document.getElementById("horsie").addEventListener("mouseenter", sizeBig)
+  function sizeBig() {
+    document.getElementById("horsie").style.height = "500px";
+    document.getElementById("horsie").style.width = "600px"
+  }
+  document.getElementById("horsie").addEventListener("mouseleave", sizeSmall)
+  function sizeSmall() {
+    document.getElementById("horsie").style.height = "100px"
+    document.getElementById("horsie").style.width = "500px"
+
+  }
+  document.getElementById("one").addEventListener("click", up)
+  var score = 1
+  function up() {
+    score = score + 1
+    document.getElementById("one").innerHTML = score
+    console.log(score)
+  }
+
+</script>

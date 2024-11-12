@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <style>
     body {
       margin-top: 20px;
@@ -16,10 +18,10 @@
 
     .pad {
       position: fixed;
-      width: 60%;
-      height: 60%;
-      top: 50%;
-      left: 250px;
+      width: 790px;
+      height: 400px;
+      top: 225px;
+      right: 260px;
     }
 
     .Click {
@@ -27,10 +29,11 @@
       position: fixed;
       width: 60%;
       height: 60%;
-      top: 0%;
-      left: 475px;
+      top: 70px;
+      right: 60px;
 
     }
+
 
     .backgroundStuff {
       position: absolute;
@@ -89,6 +92,59 @@
       transform: translate(-50%, -50%);
       font-size: 18px;
     }
+
+    #flyDIV {
+      display: block;
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      top: 15%;
+      right: 470px
+    }
+
+    #flyImg {
+      height: 40px;
+      width: auto;
+    }
+
+    #fly {
+      background-color: rgba(238, 255, 243, 0.555);
+      border-radius: 25px;
+    }
+
+    #flyDIV2 {
+      display: block;
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      top: 30%;
+      right: 400px;
+    }
+
+    #flyImg2 {
+      height: 25px;
+      width: auto;
+    }
+
+    #fly2 {
+      background-color: rgba(238, 255, 243, 0.555);
+      border-radius: 25px;
+    }
+
+    #faderBoyyy {
+      animation: fadeIn 2s;
+      animation: fadeOut 2s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 100;
+      }
+    }
   </style>
 </head>
 
@@ -120,17 +176,33 @@
     <img id="backgroundStuff5"
       src="https://images.vexels.com/media/users/3/288916/isolated/preview/96d03de6c11f152d1ab34863d70ce176-lily-pads-flat.png">
   </div>
-  <div class="Click">
-    <img id="img"
-      src="https://png.pngtree.com/png-vector/20240127/ourmid/pngtree-watercolor-funny-frog-wearing-sunglasses-ai-generated-png-image_11554771.png">
-  </div>
   <div class="pad">
     <img class="pad"
       src="https://png.pngtree.com/png-vector/20230104/ourmid/pngtree-wood-log-vector-clip-art-png-image_6551751.png">
     <div class="Score">
       <h1 id="Score">Score: 0</h1>
     </div>
+  </div>
+  <div class="Click">
+    <img id="img"
+      src="https://png.pngtree.com/png-vector/20240127/ourmid/pngtree-watercolor-funny-frog-wearing-sunglasses-ai-generated-png-image_11554771.png">
+  </div>
 
+
+  <div id="flyDIV">
+    <button id="fly">
+      <img id="flyImg"
+        src="https://lh6.googleusercontent.com/proxy/_pooybrK4Jrv66fcay3NIVhMLQ2YH8RenY0Kn5bLqJBLEc-IMVXrKX7lBRrX7FwWAR4j3fgZHaHf0XE4YZZSh7uTh0XLneFfHcPNONQap6XVQw">
+    </button>
+  </div>
+  <div id="flyDIV2">
+    <button id="fly2">
+      <img id="flyImg2"
+        src="https://lh6.googleusercontent.com/proxy/_pooybrK4Jrv66fcay3NIVhMLQ2YH8RenY0Kn5bLqJBLEc-IMVXrKX7lBRrX7FwWAR4j3fgZHaHf0XE4YZZSh7uTh0XLneFfHcPNONQap6XVQw">
+    </button>
+  </div>
+  <div id="faderBoyyy">
+    <img src="https://www.clker.com/cliparts/L/K/l/y/m/V/white-border-white-rectangle-white-page.svg.hi.png">
   </div>
 </body>
 
@@ -138,10 +210,46 @@
 <script>
   document.getElementById("img").addEventListener("click", up)
   var score = 0
+  var clickNumber = 1
+  var cost = 15
   function up() {
-    score = score + 1
+    score = score + clickNumber
     document.getElementById("Score").innerHTML = "Score: " + score
     console.log(score)
   }
+  document.getElementById("fly").addEventListener("click", upgrade)
+  function upgrade() {
+    if (score >= cost) {
+      clickNumber = clickNumber + 1
+      score = score - cost
+      document.getElementById("Score").innerHTML = "Score: " + score
+    }
+    if (clickNumber = clickNumber+1) { cost = cost*2; }
+    document.getElementById("Score").innerHTML = "Score: " + score
+  }
+
+
+
+  var Angry = "Leave me alone!!!!!!!"
+  document.getElementById("fly2").addEventListener("click", confirmation)
+  function confirmation() {
+    alert("Leave me alone!!!!!!");
+    score = score - 10;
+    updateScore();
+    if (0 > score) { score = 0; }
+    updateScore();
+    function updateScore() {
+      document.getElementById("Score").innerHTML = "Score: " + score;
+
+    }
+    ;
+  }
+
+
+
+
+
+
+
 
 </script>

@@ -2,7 +2,7 @@ body {
     background: rgb(84, 95, 193);
     color: #fff3ee;
     padding: 10px;
-    font-family: arial;
+    font-family: serif;
 }
 #all-contents {
   max-width: 800px;
@@ -11,7 +11,7 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(192, 254, 255);
+    background: rgb(123, 223, 224);
    margin: 0 auto;
    margin-bottom: 20 px;
  
