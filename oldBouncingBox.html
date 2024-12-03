@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bouncing Box</title>
+  <style>
+    #firstOne {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="firstOne">
+
+  </div>
+
+</body>
+
+</html>
+<script>
+  var positionX = 5;
+  var direction = 5
+  speedX = 20;
+  var positionY = 30;
+  var updown = 5
+  var speedY = 25
+  document.getElementById("firstOne").addEventListener("click", moveBox)
+  setInterval(moveBox, 16)
+  function moveBox() {
+    document.getElementById("firstOne").style.left = 100 + positionX + "px";
+    document.getElementById("firstOne").style.top = 100 + positionY + "px";
+    positionX = positionX + direction
+    positionY = positionY + updown
+
+    if (positionX > 1000) {
+      direction = -5
+    }
+    if (positionX === 0) { direction = 5 }
+
+    if (positionY > 500) {
+      updown = -5
+    };
+    if (positionY < 0) { updown = 5 };
+  }
+
+  document.getElementById("firstOne").addEventListener("click", speedXandY)
+  function speedXandY() {
+    if (direction > 0) { direction = direction * 2 };
+    if (direction < 0) { direction = direction * 2 };
+    if (updown > 0) { updown = updown * 2 };
+    if (updown < 0) { updown = updown * 2 };
+  }
+</script>

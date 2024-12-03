@@ -202,7 +202,7 @@
     </button>
   </div>
   <div id="faderBoyyy">
-    <img src="https://www.clker.com/cliparts/L/K/l/y/m/V/white-border-white-rectangle-white-page.svg.hi.png">
+    <img id = "faderImg" src="https://png.pngtree.com/png-vector/20240125/ourmid/pngtree-white-rectangle-png-png-image_11495112.png">
   </div>
 </body>
 
@@ -220,15 +220,16 @@
   document.getElementById("fly").addEventListener("click", upgrade)
   function upgrade() {
     if (score >= cost) {
-      clickNumber = clickNumber + 1
-      score = score - cost
-      document.getElementById("Score").innerHTML = "Score: " + score
+      score = score - cost;
+      document.getElementById("Score").innerHTML = "Score: " + score;
+      clickNumber = clickNumber + 1;
+      cost = cost*3
     }
-    if (clickNumber = clickNumber+1) { cost = cost*2; }
-    document.getElementById("Score").innerHTML = "Score: " + score
   }
 
-
+  setInterval(()=>{
+    alert('one')
+  },1000 * 5)
 
   var Angry = "Leave me alone!!!!!!!"
   document.getElementById("fly2").addEventListener("click", confirmation)

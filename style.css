@@ -1,167 +1,142 @@
 body {
-    background: rgb(84, 95, 193);
-    color: #fff3ee;
-    padding: 10px;
-    font-family: serif;
+  background: rgb(84, 95, 193);
+  color: #fff3ee;
+  padding: 10px;
+  font-family: serif;
 }
+
 #all-contents {
   max-width: 800px;
-    margin: auto;
+  margin: auto;
 }
 
 /* navigation menu */
 nav {
-    background: rgb(123, 223, 224);
-   margin: 0 auto;
-   margin-bottom: 20 px;
- 
-    display: flex;
-    padding: 10px;
-     
+  background: rgb(123, 223, 224);
+  margin: 0 auto;
+  margin-bottom: 20 px;
+
+  display: flex;
+  padding: 10px;
+
 }
+
 h1 {
-    display: flex;
-    align-items: center;
-    color: rgb(255, 132, 132);
-    flex: 1;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 132, 132);
+  flex: 1;
+  margin: 0;
 }
+
 #nav-ul {
-    list-style-image: none;
+  list-style-image: none;
 }
+
 .nav-li {
-    display: inline-block;
-    padding: 0 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
+
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* main container area beneath menu */
 main {
-    background: rgb(254, 141, 110);
-    display: flex;
+  background: rgb(254, 141, 110);
+  display: flex;
 }
+
 .sidebar {
-    margin-right: 25px;
-    padding: 10px;
+  margin-right: 25px;
+  padding: 10px;
 }
+
 .sidebar-img {
-    width: 200px;
-}
-.content {
-    flex: 1;
-    padding: 15px;
+  width: 200px;
 }
 
 /* portfolio styles */
 #interests {
-    border: 4px silver ridge;
-    padding: 8px;
+  border: 4px silver ridge;
+  padding: 8px;
 }
-h2, h3 {
-    margin: 0px;
+
+h2,
+h3 {
+  margin: 0px;
 }
-     /* portfolio styles */
-     .content h1 {
-        color: black;
-    }
 
-    #portfolio {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    #portfolio li {
-        background: #fff;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-
-    #portfolio li:hover {
-        background: #eee;
-    }
-
-    #portfolio a {
-        text-decoration: none;
-        color: #454545;
-    }
+.content {
+  flex: 1;
+  padding: 15px;
+}
 
 
+/* portfolio styles */
+.content h1 {
+  color: rgb(180, 169, 169);
+}
 
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
 
-CHECK YOUR LIVE SERVER
-Is your portfolio completely styled?
+#portfolio li {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-Did you add the portfolio CSS to the end of your style.css file?
+#portfolio li:hover {
+  background: #eee;
+}
 
-Now that you're finished, push your code up. There are extra challenges below
-
-
-
-
-
-Extra Challenge
-Here's some other things to try:
-
-Google 'border radius' and add it to the nav selector to give the <nav> element rounded corners
-Add a border around the image
-Change the color of the background
-Add a favicon to your index.html and portfolio.html files
-Make website mobile responsive.
-
-Note: If you have preexisting style tags in your index.html file, you put the link to your style.css file with your responsive style rules at the bottom of the <head> tag.
-
-Here's some CSS to get you started on making your website mobile responsive
-
-       /* responsive web design */
-       @media screen and (min-width: 120px) and (max-width: 1080px) {
-         main {
-           height: 100ch;
-           zoom: 1.5;
-           display: grid;
-         }
-
-         h1 {
-           font-size: 44px;
-         }
-
-         h2 {
-           font-size: 42px;
-         }
-
-         h3 {
-           font-size: 36px;
-         }
-
-         #all-contents {
-           height: 100ch;
-           margin: none;
-         }
-
-         a {
-           font-size: 42px;
-         }
-
-         .sidebar {
-           margin-right: 0px;
-           justify-content: center;
-           align-items: center;
-         }
-
-         .sidebar-img {
-           width: 100%;
-         }
-
-         p,
-         li {
-           font-size: 24px;
-         }
-
-         .content {
-           align-content: center;
-           justify-content: center;
-         }
-     }
+#portfolio a {
+  text-decoration: none;
+  color: #454545;
+}
+/* responsive web design */
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 100ch;
+    zoom: 1.5;
+    display: grid;
+  }
+  h1 {
+    font-size: 44px;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  #all-contents {
+    height: 100ch;
+    margin: none;
+  }
+  a {
+    font-size: 42px;
+  }
+  .sidebar {
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar-img {
+    width: 100%;
+  }
+  p,
+  li {
+    font-size: 24px;
+  }
+  .content {
+    align-content: center;
+    justify-content: center;
+  }
+}
