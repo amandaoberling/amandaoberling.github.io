@@ -83,7 +83,7 @@ var init = function (window) {
             }
 
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            if (circlex = 0) { circlex = canvas.length }
+            if (circle.x < 0) { circle.x = canvas.length }
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
