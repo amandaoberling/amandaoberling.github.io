@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <canvas id="canvas" height="800" width="2000">
+
+    </canvas>
+</body>
+
+</html>
+<script>
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    var positionX = [];
+    var positionY = [];
+    var V = [];
+    var Z = [];
+    for (let i = 0; i < 1000; i = i + 1) {
+        positionX[i] = Math.floor(Math.random() * 10)
+        positionY[i] = Math.floor(Math.random() * 10)
+        Z[i] = Math.floor(Math.random() * 10)
+        V[i] = Math.floor(Math.random() * 10)
+    }
+    setInterval(main, 50);
+    function main() {
+        ctx.clearRect(0, 0, 2000, 2000)
+        for (var i = 0; i < 1000; i = i + 1) {
+            positionX[i] = positionX[i]+V[i];
+            ctx.fillRect(positionX[i], positionY[i], 100, 100)
+            if (positionX[i] > 6500) { V[i] = -1 * V[i]; }
+            if (positionX[i] < 0) { V[i] = V[i] * -1; }
+            positionY[i] = positionY[i] + Z[i];
+            if (positionY[i] > 900) { Z[i] = -1 * Z[i]; }
+            if (positionY[i] < 0) { Z[i] = Z[i] * -1; }
+            ;
+        }
+        ;
+    }
+
+
+</script>
